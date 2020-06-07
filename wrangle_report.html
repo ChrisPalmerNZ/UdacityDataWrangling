@@ -13209,21 +13209,31 @@ div#notebook {
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Summary-of-Data-Tidying-performed">Summary of Data Tidying performed<a class="anchor-link" href="#Summary-of-Data-Tidying-performed">&#182;</a></h2><ol>
-<li>Extracted dog types columns <code>doggo</code>, <code>floofer</code>, <code>pupper</code> and <code>puppo</code> to a separate <code>df_dog_type</code> dataframe and exported to <code>dog_types.csv</code><ul>
+<li>Converted dog types values to a list into one new <code>dog_type</code> column in the original table<ul>
+<li>Additionally, extracted dog types columns <code>doggo</code>, <code>floofer</code>, <code>pupper</code> and <code>puppo</code> to a separate <code>df_dog_type</code> dataframe<ul>
 <li>Consists of <code>ID</code>,<code>tweet_id</code> and <code>dog_type</code> columns</li>
-<li>However, kept the original dog type columns, but reset the data type of the columns to boolean<br>
+<li>And, exported to <code>dog_types.csv</code><br>
 <br>    </li>
 </ul>
 </li>
-<li>Extracted <code>name</code> column to a separate <code>df_name</code> dataframe and exported to <code>dog_names.csv</code><ul>
+</ul>
+</li>
+<li>Added multiple name values into a list into the existing <code>name</code> column<ul>
+<li>Step was actually performed as part of data cleaning of names</li>
+<li>Additionally, extracted <code>name</code> column to a separate <code>df_name</code> dataframe<ul>
 <li>Consists of <code>ID</code>,<code>tweet_id</code> and <code>name</code> columns</li>
-<li>However, kept the original <code>name</code> column, but after correcting it may now contain more than one name<br>
+<li>And, exported to <code>dog_names.csv</code><br>
 <br>   </li>
 </ul>
 </li>
-<li>Created a long-form version of the images table and exported to <code>dog_breed_predictions.csv</code><ul>
+</ul>
+</li>
+<li>Merged the image predictions data into the main table    <ul>
+<li>Additionally, created a long-form version of the images table <ul>
 <li>Consists of <code>tweet_id</code>,<code>score</code>,<code>isdog</code> and <code>breed</code> columns</li>
-<li>Did not alter the original images table, this can link to it as a parent table on tweet_id to get image file name</li>
+<li>And, exported to <code>dog_breed_predictions.csv</code></li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
